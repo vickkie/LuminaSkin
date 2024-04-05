@@ -1,0 +1,224 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+:root {
+  margin: 0;
+  --fade-black: 0, 0, 0;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-bg: #fbfbfb;
+  --stick-black: #000;
+  --stick-white: #fff;
+  --main-color: #fc1234;
+  --color-third: #bed2f5;
+  --color-forth: #2b2d42;
+  --p-white: #4f4f4f;
+  --font-1: sohne-light;
+  --font-2: Alte-Grotesk;
+  --font-3: sohne-mono;
+  --font-4: Diamond-Grotesk;
+  --mid-largefont: 1.8rem;
+  --mid-font: 6vw;
+  font-size: 15px;
+}
+
+ul {
+  list-style: none;
+}
+body {
+  background-color: var(--color-bg);
+  color: var(--color-black);
+  font-family: var(--font-2), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: max-content;
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.dark-mode {
+  --color-black: #fff !important;
+  --color-white: #000 !important;
+  --color-bg: #000 !important;
+}
+.center {
+  text-align: center;
+}
+@font-face {
+  font-display: swap;
+  font-family: Alte-Grotesk;
+  src: url(../fonts/AlteHaasGrotesk.woff2) format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: sohne-light;
+  src: url(../fonts/sohne-light.4e76c39.woff2) format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: sohne-mono;
+  src: url(../fonts/sohne-mono-light.ebb4786.woff2) format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: Diamond-Grotesk;
+  src: url(../fonts/DiamondGrotesk.woff) format("woff");
+}
+
+a {
+  color: var(--color-bg);
+  text-decoration: none;
+}
+a,
+a:hover {
+  outline: none;
+}
+a:hover {
+  color: var(--color-black);
+}
+a.website {
+  color: var(--color-title);
+}
+a.website:hover {
+  color: var(--main-color);
+}
+a.black {
+  color: var(--color-black);
+}
+a.black:hover {
+  color: var(--color-bg);
+}
+a:focus {
+  background: #d3d3d3;
+  outline: none;
+}
+a:focus:not(:focus-visible) {
+  background: transparent;
+}
+a:focus-visible {
+  background: transparent;
+  outline: 2px solid #fff;
+}
+
+* {
+  scrollbar-width: 0 !important;
+}
+
+h1 {
+  font-size: 2.986rem;
+}
+
+h2 {
+  font-size: 2.488rem;
+}
+
+h3 {
+  font-size: 2.074rem;
+}
+h4 {
+  font-size: 1.728rem;
+}
+h5 {
+  font-size: 1.44rem;
+}
+h6 {
+  font-size: 1.2rem;
+}
+p {
+  font-size: 1rem;
+}
+
+small {
+  font-size: 0.833rem;
+}
+html::-webkit-scrollbar {
+  background-color: var(--color-bg) !important;
+  width: 9px !important;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--color-black) !important;
+}
+
+html#indexpage {
+  overflow-y: scroll !important;
+  overflow-x: hidden;
+}
+
+/* start */
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 30% 25% 30% 15%;
+  grid-template-rows: 1fr;
+  min-height: 50vh;
+  grid-template-areas: "hero-left ... hero-center hero-right";
+  padding: 12px;
+}
+.hero-left {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  grid-area: hero-left;
+  justify-content: space-between;
+}
+.hero-center {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  grid-area: hero-center;
+}
+.hero-right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  grid-area: right;
+}
+.hero-image {
+  display: grid;
+  position: inherit;
+  max-height: 70vh;
+  overflow: hidden;
+  place-content: center;
+}
+.hero-image img {
+  width: 100%;
+}
+.main-slogan {
+  font-family: var(--font-4);
+  font-size: 1.24rem;
+}
+.mainlogo {
+  font-size: 4rem;
+  font-family: var(--font-4);
+}
+#NavLinks {
+  list-style-type: none;
+  display: flex;
+  height: fit-content;
+  text-transform: uppercase;
+}
+#NavLinks a {
+  color: var(--p-white);
+}
+
+.current {
+  color: var(--color-black) !important;
+}
+#NavLinks ul {
+  color: var(--color-black);
+  display: flex;
+  gap: 10px;
+  height: fit-content;
+  width: 100%;
+  padding: 0;
+  font-size: calc(0.6vw + 5px);
+}
+
+li {
+  height: fit-content;
+}
